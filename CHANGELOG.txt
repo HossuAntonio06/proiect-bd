@@ -1,0 +1,6 @@
+Changelog
+
+[v0.1-analiza] - Săptămâna 1
+- Initializare depozit Git si structura de directoare.
+- Adaugat primele 2 pagini in documentatia Word (Titlu, Cuprins, Scop, Obiective).
+- Documentat domeniul ales: Platforma bursiera (TradeFlex).
