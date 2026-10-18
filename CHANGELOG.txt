@@ -4,3 +4,9 @@ Changelog
 - Initializare depozit Git si structura de directoare.
 - Adaugat primele 2 pagini in documentatia Word (Titlu, Cuprins, Scop, Obiective).
 - Documentat domeniul ales: Platforma bursiera (TradeFlex).
+
+## [v0.2-modelare] - Săptămânile 2–4
+- Completat Capitolul 3 din documentația Word: Analiza cerințelor și descrierea modelului ER.
+- Definit cele 11 entități principale, atributele, cheile primare (PK) și cheile străine (FK).
+- Specificat relațiile și cardinalitățile dintre entități (1:1, 1:N, N:M).
+- Generat și adăugat diagrama conceptuală vizuală ER (diagrama_ER_TradeFlex.png) în folderul db/.
