@@ -10,3 +10,8 @@ Changelog
 - Definit cele 11 entități principale, atributele, cheile primare (PK) și cheile străine (FK).
 - Specificat relațiile și cardinalitățile dintre entități (1:1, 1:N, N:M).
 - Generat și adăugat diagrama conceptuală vizuală ER (diagrama_ER_TradeFlex.png) în folderul db/.
+
+## [v0.3-model-logic] - Săptămânile 5–6
+- Redactat Capitolul 4 din documentație: Modelul Logic / Relațional.
+- Detaliat schema relațională pentru cele 11 entități.
+- Realizată demonstrația pas cu pas a normalizării până la Forma Normală 3 (FN1 -> FN2 -> FN3).
