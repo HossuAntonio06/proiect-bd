@@ -1,0 +1,100 @@
+erDiagram
+    UTILIZATORI ||--o{ PORTOFOLII : "detine (1:N)"
+    PORTOFOLII ||--o{ ORDINE : "plaseaza (1:N)"
+    ACTIVE ||--o{ ORDINE : "vizeaza (1:N)"
+    ORDINE ||--o{ TRANZACTII : "genereaza (1:N)"
+    PORTOFOLII ||--o{ POZITII : "contine (1:N)"
+    ACTIVE ||--o{ POZITII : "inclus_in (1:N)"
+    SECTOARE ||--o{ ACTIVE : "clasifica (1:N)"
+    ACTIVE ||--o{ COTATII_ZILNICE : "inregistreaza (1:N)"
+    ACTIVE ||--o{ DIVIDENDE : "emite (1:N)"
+    PORTOFOLII ||--o{ INCASARI_DIVIDENDE : "primeste (1:N)"
+    DIVIDENDE ||--o{ INCASARI_DIVIDENDE : "distribuie (1:N)"
+    ACTIVE ||--o{ PREDICTII_IA : "analizeaza (1:N)"
+    PORTOFOLII ||--o{ PREDICTII_IA : "evalueaza (1:N)"
+
+    UTILIZATORI {
+        int id_utilizator PK
+        string nume
+        string email UK
+        string parola_hash
+        string rol
+    }
+
+    PORTOFOLII {
+        int id_portofoliu PK
+        int id_utilizator FK
+        string denumire
+        string moneda
+        decimal sold_cash
+    }
+
+    SECTOARE {
+        int id_sector PK
+        string nume_sector UK
+    }
+
+    ACTIVE {
+        int id_activ PK
+        int id_sector FK
+        string simbol_ticker UK
+        string denumire_companie
+        string tip_activ
+    }
+
+    COTATII_ZILNICE {
+        int id_cotatie PK
+        int id_activ FK
+        date data_cotatie
+        decimal pret_inchidere
+        bigint volum
+    }
+
+    ORDINE {
+        int id_ordin PK
+        int id_portofoliu FK
+        int id_activ FK
+        string tip_ordin
+        int cantitate_solicitata
+        decimal pret_limita
+        string status
+    }
+
+    TRANZACTII {
+        int id_tranzactie PK
+        int id_ordin FK
+        int cantitate_executata
+        decimal pret_executie
+        decimal comision
+    }
+
+    POZITII {
+        int id_pozitie PK
+        int id_portofoliu FK
+        int id_activ FK
+        int cantitate_totala
+        decimal pret_mediu_achizitie
+    }
+
+    DIVIDENDE {
+        int id_dividend PK
+        int id_activ FK
+        decimal suma_per_actiune
+        date data_platii
+    }
+
+    INCASARI_DIVIDENDE {
+        int id_incasare PK
+        int id_portofoliu FK
+        int id_dividend FK
+        decimal suma_totala_incasata
+    }
+
+    PREDICTII_IA {
+        int id_predictie PK
+        int id_activ FK
+        int id_portofoliu FK
+        string clasa_risc
+        decimal pret_estimat
+        string directie_trend
+    }
