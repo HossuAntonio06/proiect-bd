@@ -15,3 +15,10 @@ Changelog
 - Redactat Capitolul 4 din documentație: Modelul Logic / Relațional.
 - Detaliat schema relațională pentru cele 11 entități.
 - Realizată demonstrația pas cu pas a normalizării până la Forma Normală 3 (FN1 -> FN2 -> FN3).
+
+## [v0.4-model-fizic-ddl] - Săptămânile 7-8
+- Redactat Capitolul 5 din documentație: Modelul Fizic și Dicționarul de Date detaliat pentru toate cele 11 tabele.
+- Integrat evoluția diagramelor ER în documentație (Conceptual, Logic FN3 și Fizic Oracle DB).
+- Reorganizat structura depozitului db/ conform cerințelor (db/diagrams/schema.png, db/diagrams/er.mmd).
+- Adăugat scriptul DDL `db/schema/01_create_tables.sql` cu toate constrângerile de integritate (PK, FK, UNIQUE, CHECK, NOT NULL).
+- Adăugat scriptul DML de populare cu date de test `db/seed/01_insert_date.sql` pentru toate entitățile sistemului.
